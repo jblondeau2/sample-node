@@ -1,0 +1,49 @@
+{
+  "name": "basejs",
+  "version": "0.1.0",
+  "description": "Base structure for all projects",
+  "main": "dist/app/index.js",
+  "repository": {
+    "url": "github.com/Mindsers/basejs",
+    "type": "git"
+  },
+  "author": "Nathanaël Cherrier",
+  "license": "MIT",
+  "scripts": {
+    "test:coverage": "NODE_ENV=test nyc mocha",
+    "test:unit": "mocha -r babel-core/register",
+    "test:lint": "eslint src/**/*.js",
+    "test": "npm run test:lint && npm run test:coverage",
+    "build:docs": "esdoc -c .esdoc.json",
+    "build:dev": "NODE_ENV=development babel src -d dist --sourcemap -w",
+    "build:prod": "NODE_ENV=production babel src -d dist",
+    "build": "npm run build:prod",
+    "start": "nodemon dist/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-istanbul": "^3.0.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.12.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.0.0"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

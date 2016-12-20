@@ -1,0 +1,78 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "standard",
+  "installedESLint": true,
+  "plugins": [
+    "standard",
+    "promise"
+  ],
+  "rules": {
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": [
+          "/"
+        ]
+      }
+    ],
+    "no-unneeded-ternary": [
+      "error"
+    ],
+    "no-nested-ternary": [
+      "error"
+    ],
+    "no-duplicate-case": [
+      "error"
+    ],
+    "no-dupe-args": [
+      "error"
+    ],
+    "no-dupe-keys": [
+      "error"
+    ],
+    "no-extra-boolean-cast": [
+      "error"
+    ],
+    "no-invalid-regexp": [
+      "error"
+    ],
+    "no-extra-parens": [
+      "error"
+    ],
+    "valid-jsdoc": [
+      "error"
+    ],
+    "use-isnan": [
+      "error"
+    ],
+    "accessor-pairs": [
+      "error"
+    ],
+    "array-callback-return": [
+      "error"
+    ],
+    "complexity": [
+      "error",
+      {
+        "max": 6
+      }
+    ],
+    "default-case": [
+      "error"
+    ],
+    "no-alert": [
+      "error"
+    ]
+  }
+}
