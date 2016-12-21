@@ -14,7 +14,7 @@ class Router {
    * @return {undefined}
    */
   register(path, action, method = 'get') {
-    throw new TypeError('Method {register} of {Router} class was not overwrite')
+    throw new TypeError('Method {register} of {Router} class was not override')
   }
 
   /**
@@ -27,7 +27,7 @@ class Router {
    * @returns {Controller~actionCallback} The matching action
    */
   resolve(path, method) {
-    throw new TypeError('Method {resolve} of {Router} class was not overwrite')
+    throw new TypeError('Method {resolve} of {Router} class was not override')
   }
 }
 
