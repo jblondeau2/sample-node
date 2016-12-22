@@ -11,7 +11,7 @@ class DefaultController extends Controller {
    * @type {string[]}
    */
   static get dependencies() {
-    return ['consoleService']
+    return ['loggerService']
   }
 
   /**
@@ -23,15 +23,15 @@ class DefaultController extends Controller {
     return routes
   }
 
-  constructor(consoleService) {
+  constructor(loggerService) {
     super()
 
     /**
      * Logger service
      *
-     * @type {ConsoleService}
+     * @type {LoggerService}
      */
-    this.consoleService = consoleService
+    this.logger = loggerService
   }
 
   /**
@@ -42,7 +42,7 @@ class DefaultController extends Controller {
    * @return {undefined}
    */
   indexAction(req, res) {
-    this.consoleService.log('param.name')
+    this.logger.info('param.name')
 
     res.end('{}')
   }

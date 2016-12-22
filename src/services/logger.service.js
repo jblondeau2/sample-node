@@ -1,11 +1,11 @@
-class ConsoleService {
+class LoggerService {
   /**
    * Class name. Used as key in dependency injector
    *
    * @type {string}
    */
   static get className() {
-    return 'consoleService'
+    return 'loggerService'
   }
 
   /**
@@ -20,11 +20,14 @@ class ConsoleService {
   /**
    * Log caller
    *
+   * @param {string} message - message to log
    * @return {undefined}
    */
-  log() {
-    console.log('param.name')
+  info(message) {
+    let now = new Date()
+    let msg = `${now.toLocaleString()} - ${message}`
+    console.log(msg)
   }
 }
 
-export { ConsoleService }
+export { LoggerService }
