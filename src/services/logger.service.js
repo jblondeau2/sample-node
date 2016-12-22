@@ -1,22 +1,6 @@
-class LoggerService {
-  /**
-   * Class name. Used as key in dependency injector
-   *
-   * @type {string}
-   */
-  static get className() {
-    return 'loggerService'
-  }
+import { Service } from '../core/service'
 
-  /**
-   * Dependency list
-   *
-   * @type {string[]}
-   */
-  static get dependencies() {
-    return []
-  }
-
+class LoggerService extends Service {
   /**
    * Log caller
    *
