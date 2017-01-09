@@ -10,8 +10,8 @@
   "author": "Nathanaël Cherrier",
   "license": "MIT",
   "scripts": {
-    "test:coverage": "NODE_ENV=test nyc mocha",
-    "test:unit": "mocha \"test/**/*.js\" -r babel-core/register",
+    "test:coverage": "NODE_ENV=test nyc mocha test/**/*.js",
+    "test:unit": "mocha test/**/*.js -r babel-core/register",
     "test:lint": "eslint src/**/*.js",
     "test": "npm run test:lint && npm run test:coverage",
     "build:docs": "esdoc -c .esdoc.json",
